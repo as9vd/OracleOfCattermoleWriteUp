@@ -17,7 +17,13 @@
     <h2 class="video-header">Examples:</h2>
     <div class="video-container">
         <p class="text-block">
-            For those looking to get a quick glimpse of the project, here is an example run-through of my application. 
+            For those wanting to see some code, here's a link to an <a class="text-block" href="https://github.com/as9vd/OracleOfCattermoleWriteUp/blob/main/exampleScrapeBook.ipynb">example Python notebook.</a>
+            Here's the code for the <a class="text-block" href="https://github.com/as9vd/OracleOfCattermoleWriteUp/blob/main/Machine.js">main page</a> of my app. 
+            <a class="text-block" href="https://github.com/as9vd/OracleOfCattermoleWriteUp/blob/main/Machine.css">CSS</a> also (if you want it, for whatever reason).
+            That's all I'm willing to expose right now! 🤭
+        </p>
+        <p class="text-block">
+            Now, for those just looking to get a quick glimpse of the project, here is an example run-through of my application. 
             In this example, I created a link between John Stones and Lee Cattermole.
         </p>
         <div class="video-wrapper">
@@ -34,11 +40,13 @@
     <h2 class="write-up-header">Write-Up:</h2>
     <div class="write-up-container">
         <p class="text-block">
-            Hello, my name is Asad. Today, I'm presenting something a project 
-            I worked on during the 2nd semester of the 2022-23 school year. It's a real-world application of the Breadth-First Search algorithm.
+            Hello, my name is Asad. Today, I'm presenting a project 
+            I worked on during the 2nd semester of the 2022-23 school year. 
+            And, unlike my write-up for the deep learning project I made, I'll keep this one short and sweet.
+            This project is a real-world application of the Breadth-First Search algorithm.
             Basically, I gathered the career data of over 50,000 footballers, past and present, 
             to create a nice little application that links any two players, ever (given they're both in the dataset).
-            It is the football equivalent to the famous Oracle of Bacon, albeit I haven't yet chosen a central figure for the traversal.
+            It is the football equivalent of the famous Oracle of Bacon, albeit I haven't yet chosen a central figure for the traversal.
             I will do that now. Lee Cattermole. There you go. Just done that on the spot. The Oracle of Cattermole.
             Sounds good. 
         </p>
@@ -46,7 +54,7 @@
         <p class="text-block">
             Now, I began working on this project because I like both football and the art of programming. 
             Having the opportunity to work towards the mastery of the Python language
-            whilst being able to work with data that interests me? Easy.
+            whilst being able to work with a dataset that interests me? Easy.
             Now, originally, I wanted to make use of a more sophisticated graph algorithm. Last semester, I took
             a graduate level course on algorithms, and I loved it. Especially the section on graphs.
             I really, really enjoyed diving deep into algorithms/topics like Ford-Fulkerson, Bellman-Ford, 
@@ -59,7 +67,7 @@
             Simply put, it's something cool I could show my mates. 
             Being able to connect Kylian Mbappe, one of the most talented footballers of our time,
             to a random Scotsman from the 1890s—who played 5 times for the mighty Partick Thistle, 
-            before disappearing off the face of the Earth—is truly remarkable.
+            before disappearing off the face of the Earth—is truly mind-blowing.
         </p>
         <img class="image" src="media/mbappe.jpeg" style="width: 300px !important; height: 210px;" alt="Mbappe"/>
         <p class="text-block">
@@ -93,7 +101,8 @@
         <img class="image" src="media/bull.jpeg" style="width: 200px !important; height: 480px;" alt="Walter Bull's Wikipedia Page"/>
         <p class="text-block">
             A complete dream. If you look closely, you can see that Mr. Bull was at Notts County
-            for 101 years, even for 43 years beyond his Earthly existence. Wow! Unfortunately for me, 
+            for 101 years, even continuing his association with the Magpies for 43 years beyond his Earthly existence.
+            Wow! Unfortunately for me, 
             Bull's Wikipedia page was not a one-off. Many other pages had incomplete years, misspelled club names,
             inaccurate durations, etc. 
             Therefore, with these limitations in mind, I imported/scraped the data in waves, 
@@ -101,10 +110,12 @@
             check the example JupyterLab Notebook I linked above, in the 'Examples' section.
         </p>
         <p class="text-block">
-            Other than the fact that I had to gather the data in over 40 waves, it was pretty much smooth sailing from here.
+            Other than the fact that I had to gather the data in over 40 waves AND check if each player's information was valid, 
+            it was pretty much smooth sailing from here.
             I created adjacencies by finding overlapping intervals amongst players who played for the same football club. 
-            And with 53k players in the dataset, that took a while. But, in the end, I generated the adjacencies in a JSON file,
-            and I created a Flask API endpoint to expose it to my React app.
+            And, with 53k players in the dataset, that took a while. But, in the end, I put the adjacencies in a JSON file,
+            and I created a Flask API endpoint to expose said JSON to my React app. Not as sophisticated as using a graph database like
+            Neo4j, but it worked.
         </p>
         <img class="image" src="media/charlton_jack.jpeg" style="width: 200px !important; height: 112px;"  alt="Jack Charlton and Billy Bremner"/>
         <p class="text-block">
@@ -119,7 +130,7 @@
         </p>
         <img class="image" src="media/tree.jpeg" style="width: 100px !important; height: 100px;" alt="Tree"/>
         <p class="text-block">
-            Anyway, that's it for me. Thank you for reading this. 
+            Anyway, that's it for me. I kept it short and sweet, like I promised. Thank you for reading this. 
             I really would've enjoyed deploying it to the cloud for your use (with Neo4j support), but that's costly.
             Maybe in the future. For now, I feel good about this project. 
             I learned a lot whilst building it, and I certaintly honed numerous skills.
