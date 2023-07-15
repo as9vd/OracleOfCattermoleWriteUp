@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oracle of ???: Breadth-First Search</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<h1 class="intro-header">Oracle of ___: Breadth-First Search 🕸</h1>
+<div class="container">
+    <h2 class="disclaimer-header">Disclaimer:</h2>
+    <p class="disclaimer-text-block">
+        The CSS for this page is not rendered optimally on Safari. For the best reading experience, I recommend using Google Chrome.
+    </p>
+    <h2 class="video-header">Examples:</h2>
+    <div class="video-container">
+        <p class="text-block">
+            For those looking to get a quick glimpse of the project, here is an example run-through of my application. 
+            In this example, I created a link between John Stones and Lee Cattermole.
+        </p>
+        <div class="video-wrapper">
+            <video controls="controls" width="600" muted="" src="media/stones_to_cattermole.mp4" type="video/mp4" class="demo-video"></video>
+        </div>
+        <p class="text-block">
+            Here is another example. This time, I bridged the gap between Barcelona player Gavi, who was born in 2004, 
+            and Manchester United legend Billy Meredith, who was born in 1874.
+        </p>
+        <div class="video-wrapper">
+            <video controls="controls" width="600" muted="" src="media/gavi_to_meredith.mp4" type="video/mp4" class="demo-video"></video>
+        </div>
+    </div>
+    <h2 class="write-up-header">Write-Up:</h2>
+    <div class="write-up-container">
+        <p class="text-block">
+            Hello, my name is Asad. Today, I'm presenting something a project 
+            I worked on during the 2nd semester of the 2022-23 school year. It's a real-world application of the Breadth-First Search algorithm.
+            Basically, I gathered the career data of over 50,000 footballers, past and present, 
+            to create a nice little application that links any two players, ever (given they're both in the dataset).
+            It is the football equivalent to the famous Oracle of Bacon, albeit I haven't yet chosen a central figure for the traversal.
+            I will do that now. Lee Cattermole. There you go. Just done that on the spot. The Oracle of Cattermole.
+            Sounds good. 
+        </p>
+        <img class="image" src="media/cattermole.jpeg" style="width: 200px !important; height: 277px;" alt="Cattermole"/>
+        <p class="text-block">
+            Now, I began working on this project because I like both football and the art of programming. 
+            Having the opportunity to work towards the mastery of the Python language
+            whilst being able to work with data that interests me? Easy.
+            Now, originally, I wanted to make use of a more sophisticated graph algorithm. Last semester, I took
+            a graduate level course on algorithms, and I loved it. Especially the section on graphs.
+            I really, really enjoyed diving deep into algorithms/topics like Ford-Fulkerson, Bellman-Ford, 
+            A*, negative cycles, etc., and I seriously pushed myself to understand these algorithms/intuitions at the ground level,
+            redoing their proofs by hand and coding up their implementations. I like networks!
+        </p>
+        <p class="text-block">
+            So, why did I ultimately settle on BFS as my graph algorithm of choice?
+            Because it was the most simple, intuitive, and accessible. 
+            Simply put, it's something cool I could show my mates. 
+            Being able to connect Kylian Mbappe, one of the most talented footballers of our time,
+            to a random Scotsman from the 1890s—who played 5 times for the mighty Partick Thistle, 
+            before disappearing off the face of the Earth—is truly remarkable.
+        </p>
+        <img class="image" src="media/mbappe.jpeg" style="width: 300px !important; height: 210px;" alt="Mbappe"/>
+        <p class="text-block">
+            On the contrary, I didn't think my mates would be impressed by me finding the minimum-spanning tree of this network I'd created.
+            Or finding its min-cut/max-flow. 
+            I think that, in the future, I'll utilise this massive dataset in more sophisticated ways (e.g. machine learning, clustering, etc.), 
+            but for now, I was content to create The Oracle of Cattermole.
+        </p>
+        <p class="text-block">
+            To start, I used Wikipedia as my Single Source of Truth. 
+            It's not perfect, but it's better than a lot of the other alternatives out there.
+            Football doesn't have the luxury of being a predominantly American sport.
+            Basketball and American football, for instance, 
+            boast extensive statistical archives and player career records that span all the way back to the inceptions of both the NBA and the NFL, respectively.
+            In football? Nothing of the sort. European sporting culture is different.
+            There are official club records, but those are hard to come by. So, I settled on Wikipedia.
+        </p>
+        <p class="text-block">
+            Thankfully, a lot of the pages were easily parseable. For instance, look at Harold Kane's Wikipedia page.
+        </p>
+        <img class="image" src="media/kane_wiki.jpeg" style="width: 200px !important; height: 600px;" alt="Kane's Wikipedia Page"/>
+        <p class="text-block">
+            Easy to maneuever. Information is structured consistently, and there aren't any weird, dream-like behaviours.
+            Others, on the other hand, were not so easy to parse. Below is the Wikipedia page of Matthew Shaw, Blackpool legend.
+        </p>
+        <img class="image" src="media/bignoseski.jpeg" style="width: 200px !important; height: 261px;" alt="Bignoseski's Wikipedia Page"/>
+        <p class="text-block">
+            Wow! Bignoseski. Someone was on a wind-up. However, silly pet names were the least of my issues. 
+            The biggest issue I came across was below.
+        </p>
+        <img class="image" src="media/bull.jpeg" style="width: 200px !important; height: 480px;" alt="Walter Bull's Wikipedia Page"/>
+        <p class="text-block">
+            A complete dream. If you look closely, you can see that Mr. Bull was at Notts County
+            for 101 years, even for 43 years beyond his Earthly existence. Wow! Unfortunately for me, 
+            Bull's Wikipedia page was not a one-off. Many other pages had incomplete years, misspelled club names,
+            inaccurate durations, etc. 
+            Therefore, with these limitations in mind, I imported/scraped the data in waves, 
+            so I could check each player's data manually. For more information on this, 
+            check the example JupyterLab Notebook I linked above, in the 'Examples' section.
+        </p>
+        <p class="text-block">
+            Other than the fact that I had to gather the data in over 40 waves, it was pretty much smooth sailing from here.
+            I created adjacencies by finding overlapping intervals amongst players who played for the same football club. 
+            And with 53k players in the dataset, that took a while. But, in the end, I generated the adjacencies in a JSON file,
+            and I created a Flask API endpoint to expose it to my React app.
+        </p>
+        <img class="image" src="media/charlton_jack.jpeg" style="width: 200px !important; height: 112px;"  alt="Jack Charlton and Billy Bremner"/>
+        <p class="text-block">
+            As for the React app.. yeah, it wasn't too bad. useState(), useEffect(), all that jazz. 
+            If you want to see the code, I linked it in the 'Examples section'. 
+            I like React, and I think that I'm good at it. I enjoyed making the site.
+        </p>
+        <p class="text-block">
+            For the search fields, I made use of the Trie data structure. 
+            And for the constantly changing input in those search fields, 
+            I used the useCallback hook (for the first time ever) in order to avoid unnecessary rerenders.
+        </p>
+        <img class="image" src="media/tree.jpeg" style="width: 100px !important; height: 100px;" alt="Tree"/>
+        <p class="text-block">
+            Anyway, that's it for me. Thank you for reading this. 
+            I really would've enjoyed deploying it to the cloud for your use (with Neo4j support), but that's costly.
+            Maybe in the future. For now, I feel good about this project. 
+            I learned a lot whilst building it, and I certaintly honed numerous skills.
+            Have a good rest of your day.
+        </p>
+    </div>
+</div>
